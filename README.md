@@ -37,22 +37,39 @@ sqlite3
 .open userinfo.db
 
 uthuqinghong@uthuqinghong:/media/uthuqinghong/EEECE1A7ECE169F3/13.sqlite/src$ sqlite3
+
 SQLite version 3.27.2 2019-02-25 16:06:06
+
 Enter ".help" for usage hints.
+
 Connected to a transient in-memory database.
+
 Use ".open FILENAME" to reopen on a persistent database.
+
 sqlite> .open userinfo.db
+
 sqlite> .tables
+
 student
+
 sqlite> .databases
+
 main: /media/uthuqinghong/EEECE1A7ECE169F3/13.sqlite/src/userinfo.db
+
 sqlite> .schema
+
 CREATE TABLE student(         ID INTEGER PRIMARY KEY AUTOINCREMENT,         name VARCHAR(32) NOT NULL,         sex CHAR(10),         score INTEGER         );
+
 CREATE TABLE sqlite_sequence(name,seq);
+
 sqlite> select * from student
+
 ...> ;
+
 1|zhangsan|男|78
+
 2|lili|女|80
+
 3|wangwu|女|81
 
 `g++ main.cpp -g -I/usr/include -lsqlite3 -o main`
